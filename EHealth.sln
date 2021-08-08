@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Web.API", "EHealth.Web.API\EHealth.Web.API.csproj", "{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Web", "2 Web", "{BD66CD20-3234-40DE-AEF3-3BD62424F2C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Application", "1 Application", "{8D3A1D5D-90C7-4037-9FC1-754CBECDA53D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Application.Interfaces", "EHealth.Application.Interfaces\EHealth.Application.Interfaces.csproj", "{336917B6-3264-42B4-8B61-FFE219A12769}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Data", "0 Data", "{9288B270-DB17-4022-BC33-186809ECE93A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Data.CardioQvark.Interfaces", "EHealth.Data.CardioQvark\EHealth.Data.CardioQvark.Interfaces.csproj", "{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Application.Services", "EHealth.Application.Services\EHealth.Application.Services.csproj", "{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336917B6-3264-42B4-8B61-FFE219A12769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336917B6-3264-42B4-8B61-FFE219A12769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336917B6-3264-42B4-8B61-FFE219A12769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336917B6-3264-42B4-8B61-FFE219A12769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4} = {BD66CD20-3234-40DE-AEF3-3BD62424F2C5}
+		{336917B6-3264-42B4-8B61-FFE219A12769} = {8D3A1D5D-90C7-4037-9FC1-754CBECDA53D}
+		{1C5E0103-DB56-4EF1-9F31-FC7E11088B00} = {9288B270-DB17-4022-BC33-186809ECE93A}
+		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6} = {8D3A1D5D-90C7-4037-9FC1-754CBECDA53D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9BB3098-6A6F-417A-980C-06FAD6AA4188}
+	EndGlobalSection
+EndGlobal
