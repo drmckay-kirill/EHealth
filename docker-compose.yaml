@@ -1,0 +1,13 @@
+version: '2'
+
+volumes:
+  vol-mongo-aa:
+
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - vol-mongo-aa:/data/db
+    command: --nojournal
