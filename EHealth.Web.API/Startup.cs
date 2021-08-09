@@ -1,5 +1,7 @@
 using EHealth.Application.Interfaces.CardioQvark;
 using EHealth.Application.Services.CardioQvark;
+using EHealth.Data.CardioQvark.Interfaces;
+using EHealth.Data.CardioQvark.Interfaces.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,8 +26,13 @@ namespace EHealth.Web.API
             services.Configure<CardioQvarkOptions>(
                 Configuration.GetSection("CardioQvark"));
 
+            services.Configure<CardioQvarkDbOptions>(
+                Configuration.GetSection("Database"));
+
             services.AddScoped<ICardioQvarkExtract, CardioQvarkExtract>();
+            services.AddScoped<ICardioQvarkLoad, CardioQvarkLoad>();
             services.AddScoped<ICardioQvarkETL, CardioQvarkETL>();
+            services.AddScoped<ICardioQvarkRepository, CardioQvarkRepository>();
 
             var cardioQvarkCert = new X509Certificate2(
                 "CardioQvarkCert.p12"

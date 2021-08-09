@@ -9,15 +9,18 @@ namespace EHealth.Application.Services.CardioQvark
     public class CardioQvarkETL : ICardioQvarkETL
     {
         private readonly ICardioQvarkExtract _extractService;
+        private readonly ICardioQvarkLoad _loadService;
 
-        public CardioQvarkETL(ICardioQvarkExtract extractService)
+        public CardioQvarkETL(ICardioQvarkExtract extractService, ICardioQvarkLoad loadService)
         {
             _extractService = extractService;
+            _loadService = loadService;
         }
 
         public async Task Handle(QueryParameters queryParameters)
         {
-            var analysis = await _extractService.Extract(queryParameters);
+            var extractResult = await _extractService.Extract(queryParameters);
+            await _loadService.Load(extractResult);
 
             var breakPoint = 5;
         }

@@ -1,5 +1,5 @@
 ﻿using EHealth.Application.Interfaces.Base;
-using EHealth.Data.CardioQvark.Interfaces.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace EHealth.Application.Interfaces.CardioQvark
@@ -9,6 +9,6 @@ namespace EHealth.Application.Interfaces.CardioQvark
     /// </summary>
     public interface ICardioQvarkLoad : ILoadService
     {
-        Task Load(Cardiogram entity);
+        Task Load(ICollection<ExtractResult> cardioAnalysises);
     }
 }

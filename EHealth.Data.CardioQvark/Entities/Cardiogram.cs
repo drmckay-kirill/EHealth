@@ -3,18 +3,36 @@
     /// <summary>
     /// Сущность данных кардиограммы, полученной из API CardioQVARK
     /// </summary>
-    /// <param name="DeviceNumber">Серийный номер устройства</param>
-    /// <param name="PatientId">Уникальный идентификатор пациента в CardioQVARK</param>
-    /// <param name="CardiogramId">Уникальный идентификатор кардиограммы в CardioQVARK</param>
-    /// <param name="method">Наименование метода распознования ЭКГ</param>
-    /// <param name="data">Набор распознанных данных</param>
-    /// <param name="dataView">Набор распознанных данных в виде строки</param>
-    public record Cardiogram(
-        string DeviceNumber,
-        string PatientId,
-        long CardiogramId,
-        string method,
-        byte[] data,
-        string dataView
-        );
+    public class Cardiogram
+    {
+        /// <summary>
+        /// Серийный номер устройства
+        /// </summary>
+        public string DeviceNumber { get; set; }
+
+        /// <summary>
+        /// Уникальный идентификатор пациента в CardioQVARK
+        /// </summary>
+        public string PatientId { get; set; }
+
+        /// <summary>
+        /// Уникальный идентификатор кардиограммы в CardioQVARK
+        /// </summary>
+        public long CardiogramId { get; set; }
+
+        /// <summary>
+        /// Наименование метода распознования ЭКГ
+        /// </summary>
+        public string Method { get; set; }
+
+        /// <summary>
+        /// Набор распознанных данных
+        /// </summary>
+        public byte[] Data { get; set; }
+
+        /// <summary>
+        /// Набор распознанных данных в виде строки
+        /// </summary>
+        public string DataView { get; set; }
+    }
 }

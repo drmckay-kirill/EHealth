@@ -9,6 +9,6 @@ namespace EHealth.Application.Interfaces.CardioQvark
     /// </summary>
     public interface ICardioQvarkExtract : IExtractService
     {
-        Task<ICollection<AnalysisResult>> Extract(QueryParameters queryParameters);
+        Task<ICollection<ExtractResult>> Extract(QueryParameters queryParameters);
     }
 }

@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Web.API", "EHealth.Web.API\EHealth.Web.API.csproj", "{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHealth.Web.API", "EHealth.Web.API\EHealth.Web.API.csproj", "{5384A7A0-8ED1-43DD-A6E3-DFBA144FFDE4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Web", "2 Web", "{BD66CD20-3234-40DE-AEF3-3BD62424F2C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Application", "1 Application", "{8D3A1D5D-90C7-4037-9FC1-754CBECDA53D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Application.Interfaces", "EHealth.Application.Interfaces\EHealth.Application.Interfaces.csproj", "{336917B6-3264-42B4-8B61-FFE219A12769}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHealth.Application.Interfaces", "EHealth.Application.Interfaces\EHealth.Application.Interfaces.csproj", "{336917B6-3264-42B4-8B61-FFE219A12769}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Data", "0 Data", "{9288B270-DB17-4022-BC33-186809ECE93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Data.CardioQvark.Interfaces", "EHealth.Data.CardioQvark\EHealth.Data.CardioQvark.Interfaces.csproj", "{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHealth.Data.CardioQvark.Interfaces", "EHealth.Data.CardioQvark\EHealth.Data.CardioQvark.Interfaces.csproj", "{1C5E0103-DB56-4EF1-9F31-FC7E11088B00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Application.Services", "EHealth.Application.Services\EHealth.Application.Services.csproj", "{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHealth.Application.Services", "EHealth.Application.Services\EHealth.Application.Services.csproj", "{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHealth.Data.CardioQvark.Services", "EHealth.Data.CardioQvark.Services\EHealth.Data.CardioQvark.Services.csproj", "{FF5F133C-951A-4BBE-96BA-0612F7337935}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5F133C-951A-4BBE-96BA-0612F7337935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5F133C-951A-4BBE-96BA-0612F7337935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5F133C-951A-4BBE-96BA-0612F7337935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5F133C-951A-4BBE-96BA-0612F7337935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{336917B6-3264-42B4-8B61-FFE219A12769} = {8D3A1D5D-90C7-4037-9FC1-754CBECDA53D}
 		{1C5E0103-DB56-4EF1-9F31-FC7E11088B00} = {9288B270-DB17-4022-BC33-186809ECE93A}
 		{EF8340A3-C0F1-4D2B-9271-FD4C08384AD6} = {8D3A1D5D-90C7-4037-9FC1-754CBECDA53D}
+		{FF5F133C-951A-4BBE-96BA-0612F7337935} = {9288B270-DB17-4022-BC33-186809ECE93A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9BB3098-6A6F-417A-980C-06FAD6AA4188}

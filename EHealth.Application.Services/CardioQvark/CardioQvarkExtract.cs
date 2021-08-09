@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace EHealth.Application.Services.CardioQvark
             _clientFactory = clientFactory;
         }
 
-        public async Task<ICollection<AnalysisResult>> Extract(QueryParameters queryParameters)
+        public async Task<ICollection<ExtractResult>> Extract(QueryParameters queryParameters)
         {
             if (string.IsNullOrEmpty(queryParameters.DeviceNumber)
                 && string.IsNullOrEmpty(queryParameters.PatientId))
@@ -51,7 +52,7 @@ namespace EHealth.Application.Services.CardioQvark
             var cardioRes =
                 await JsonSerializer.DeserializeAsync<ICollection<CardiogramResult>>(cardioResponse);
 
-            var res = new List<AnalysisResult>();
+            var res = new List<ExtractResult>();
 
             foreach (var cardio in cardioRes)
             {
@@ -61,7 +62,21 @@ namespace EHealth.Application.Services.CardioQvark
                 var analysis =
                     await JsonSerializer.DeserializeAsync<ICollection<AnalysisResult>>(analysisRes);
 
-                res.AddRange(analysis);
+                res.AddRange(analysis.Select(x => new ExtractResult
+                {
+                    CardiogramId = x.CardiogramId,
+                    Error = x.Error,
+                    MethodId = x.MethodId,
+                    Ts = x.Ts,
+                    Value = x.Value
+                }));
+            }
+
+            foreach (var cardioExtractRes in res)
+            {
+                var cardio = cardioRes.FirstOrDefault(x => x.Id == cardioExtractRes.CardiogramId);
+                cardioExtractRes.AccountId = cardio.AccountId;
+                cardioExtractRes.DeviceSerial = cardio.DeviceSerial;
             }
 
             return res;

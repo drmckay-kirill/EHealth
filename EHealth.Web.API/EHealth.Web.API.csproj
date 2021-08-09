@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EHealth.Application.Services\EHealth.Application.Services.csproj" />
+    <ProjectReference Include="..\EHealth.Data.CardioQvark.Services\EHealth.Data.CardioQvark.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
