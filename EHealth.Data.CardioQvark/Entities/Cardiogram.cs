@@ -26,7 +26,7 @@
         public string Method { get; set; }
 
         /// <summary>
-        /// Набор распознанных данных
+        /// Набор данных в зашифрованном виде
         /// </summary>
         public byte[] Data { get; set; }
 

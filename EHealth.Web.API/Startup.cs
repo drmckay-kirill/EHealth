@@ -31,6 +31,7 @@ namespace EHealth.Web.API
 
             services.AddScoped<ICardioQvarkExtract, CardioQvarkExtract>();
             services.AddScoped<ICardioQvarkLoad, CardioQvarkLoad>();
+            services.AddScoped<ICardioQvarkTransform, CardioQvarkTransformEncryptionService>();
             services.AddScoped<ICardioQvarkETL, CardioQvarkETL>();
             services.AddScoped<ICardioQvarkRepository, CardioQvarkRepository>();
 

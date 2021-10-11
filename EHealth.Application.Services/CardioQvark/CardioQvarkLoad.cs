@@ -25,7 +25,8 @@ namespace EHealth.Application.Services.CardioQvark
                     PatientId = x.AccountId.ToString(),
                     CardiogramId = x.CardiogramId,
                     Method = x.MethodId,
-                    DataView = x.Value.ToString()
+                    DataView = x.Value.ToString(),
+                    Data = x.EncryptedValue
                 })
                 .ToList();
 

@@ -12,6 +12,8 @@
 
         public object Value { get; set; }
 
+        public byte[] EncryptedValue { get; set; }
+        
         public long AccountId { get; set; }
 
         public string DeviceSerial { get; set; }

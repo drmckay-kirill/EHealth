@@ -6,5 +6,6 @@
     /// <param name="DeviceNumber">Серийный номер</param>
     /// <param name="PatientId">Уникальный идентификатор пациента в CardioQVARK</param>
     /// <param name="Offset">Минимальный номер кардиограммы, после которой пойдёт поиск</param>
-    public record QueryParameters(string DeviceNumber, string PatientId, long? Offset);
+    /// <param name="AccessPolicy">Политики доступа для шифрования данных</param>
+    public record QueryParameters(string DeviceNumber, string PatientId, long? Offset, string[] AccessPolicy);
 }
