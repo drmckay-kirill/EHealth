@@ -21,12 +21,12 @@ namespace EHealth.Data.CardioQvark.Interfaces.Repositories
         {
             foreach (var entity in data)
             {
-                var existingEntity = await _entities
-                    .Find(x => x.CardiogramId == entity.CardiogramId)
-                    .AnyAsync();
+                //var existingEntity = await _entities
+                //    .Find(x => x.CardiogramId == entity.CardiogramId)
+                //    .AnyAsync();
 
-                if (existingEntity)
-                    continue;
+                //if (existingEntity)
+                //    continue;
 
                 await _entities.InsertOneAsync(entity);
             }
